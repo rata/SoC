@@ -1,0 +1,7 @@
+   Compiling ../../../../labo6_files/mul_test.cpp in debug mode
+   Compiling ../../../../labo6_files/mul.cpp in debug mode
+   Generating csim.exe
+Hardware result:6
+
+Ahora software: 6
+@I [SIM-1] CSim done with 0 errors.

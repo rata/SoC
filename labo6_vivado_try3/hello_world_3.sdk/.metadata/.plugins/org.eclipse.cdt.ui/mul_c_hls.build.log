@@ -1,0 +1,21 @@
+12:13:05 **** Auto Build of configuration Debug for project mul_c_hls ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../mul_c_hls_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: mul_c_hls.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mul_c_hls_bsp/ps7_cortexa9_0/lib -o "mul_c_hls.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mul_c_hls.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size mul_c_hls.elf  |tee "mul_c_hls.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28344	   1160	400022580	400052084	17d84f74	mul_c_hls.elf
+Finished building: mul_c_hls.elf.size
+ 
+
+12:13:05 Build Finished (took 215ms)
+

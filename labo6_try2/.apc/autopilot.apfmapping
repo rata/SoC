@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="mul.cpp" path="/home/rcampos/co-diseno/labo6_files/mul.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="mul_test.cpp" path="/home/rcampos/co-diseno/labo6_files/mul_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

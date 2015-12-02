@@ -1,0 +1,436 @@
+11:05:34 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper.hdf.
+11:05:39 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:05:54 INFO  : XSDB server has started successfully.
+11:06:42 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:06:43 INFO  : XSDB server has started successfully.
+11:06:45 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper.hdf.
+11:06:47 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+11:10:41 ERROR : Unexpected error while launching program.
+java.lang.IllegalArgumentException: Path for project must have only one segment.
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.resources.WorkspaceRoot.getProject(WorkspaceRoot.java:184)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyCProject(CDebugUtils.java:586)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyProgramPath(CDebugUtils.java:623)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyProgramPath(CDebugUtils.java:675)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:550)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+11:14:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:14:11 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279655795A"} -index 0' command is executed.
+11:14:13 INFO  : Mermory regions for PS have been updated.
+11:14:14 INFO  : Sourcing of '/home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:14:14 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279655795A"} -index 0' command is executed.
+11:14:15 INFO  : 'ps7_init' command is executed.
+11:14:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:14:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:14:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:14:15 INFO  : The application '/home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/hello_world_3/Debug/hello_world_3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:14:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279655795A"} -index 0
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+source /home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zybo 210279655795A"} -index 0
+ps7_init
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279655795A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279655795A"} -index 0
+dow /home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/hello_world_3/Debug/hello_world_3.elf
+----------------End of Script----------------
+
+11:14:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:14:16 INFO  : 'con' command is executed.
+11:14:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279655795A"} -index 0
+con
+----------------End of Script----------------
+
+11:21:02 INFO  : Disconnected from the channel tcfchan#1.
+11:21:02 INFO  : ps7_init is completed.
+11:21:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:23:30 INFO  : ps7_init is completed.
+11:23:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:24:07 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:24:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:25:08 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:25:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:27:02 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:27:03 INFO  : XSDB server has started successfully.
+11:27:04 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper.hdf.
+11:27:06 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+11:32:35 ERROR : Unexpected error while launching program.
+java.lang.IllegalArgumentException: Path for project must have only one segment.
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.resources.WorkspaceRoot.getProject(WorkspaceRoot.java:184)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyCProject(CDebugUtils.java:586)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyProgramPath(CDebugUtils.java:623)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyProgramPath(CDebugUtils.java:675)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:550)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+11:32:54 ERROR : Unexpected error while launching program.
+java.lang.IllegalArgumentException: Path for project must have only one segment.
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.resources.WorkspaceRoot.getProject(WorkspaceRoot.java:184)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyCProject(CDebugUtils.java:586)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyProgramPath(CDebugUtils.java:623)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyProgramPath(CDebugUtils.java:675)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:550)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+11:33:02 ERROR : Unexpected error while launching program.
+java.lang.IllegalArgumentException: Path for project must have only one segment.
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.resources.WorkspaceRoot.getProject(WorkspaceRoot.java:184)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyCProject(CDebugUtils.java:586)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyProgramPath(CDebugUtils.java:623)
+	at org.eclipse.cdt.debug.core.CDebugUtils.verifyProgramPath(CDebugUtils.java:675)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:550)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+11:33:14 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:34:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:36:35 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:36:36 INFO  : XSDB server has started successfully.
+11:36:39 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper.hdf.
+11:36:40 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+11:37:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:37:53 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:37:54 INFO  : XSDB server has started successfully.
+11:37:54 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper.hdf.
+11:37:55 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+11:38:55 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:38:56 INFO  : XSDB server has started successfully.
+11:38:59 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper.hdf.
+11:39:00 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+11:40:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:26:17 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+13:26:20 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper.hdf.
+13:26:22 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+13:26:22 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1443630343000,  Project:1441807505000
+13:26:22 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper.hdf.
+13:26:23 INFO  : XSDB server has started successfully.
+13:26:30 INFO  : Copied contents of /home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+13:26:33 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:26:36 INFO  : 
+13:26:37 INFO  : Updating hardware inferred compiler options for hello_world_3.
+13:26:37 INFO  : Clearing existing target manager status.
+13:26:38 INFO  : Closing and re-opening the MSS file of ther project hello_world_3_bsp
+13:26:38 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:26:38 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:27:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:27:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+13:27:53 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+13:28:11 INFO  : ps7_init is completed.
+13:28:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:28:52 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:35:29 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:35:30 INFO  : XSDB server has started successfully.
+11:35:33 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/design_1_wrapper.hdf.
+11:36:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:36:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+11:36:21 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+11:36:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:37:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:37:55 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:02:19 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+12:02:20 INFO  : XSDB server has started successfully.
+12:02:21 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/design_1_wrapper.hdf.
+12:02:22 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+12:02:26 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1444833586000,  Project:1443630343000
+12:02:26 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at /home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+12:02:42 INFO  : Copied contents of /home/rcampos/co-diseno/hello_world_3/hello_world_3.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+12:02:45 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:02:48 INFO  : 
+12:02:49 INFO  : Updating hardware inferred compiler options for hello_world_3.
+12:02:49 INFO  : Clearing existing target manager status.
+12:02:59 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:03:23 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+12:03:24 INFO  : XSDB server has started successfully.
+12:03:25 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/design_1_wrapper.hdf.
+12:03:26 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+12:03:29 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1444834914000,  Project:1444833299000
+12:03:29 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_1' is different from /home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/design_1_wrapper.hdf.
+12:03:34 INFO  : Copied contents of /home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_1/system.hdf.
+12:03:38 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:03:38 INFO  : Clearing existing target manager status.
+12:03:39 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+12:03:39 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+12:04:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:04:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+12:04:14 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+12:04:25 INFO  : ps7_init is completed.
+12:04:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:04:39 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:42:36 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+12:42:37 INFO  : XSDB server has started successfully.
+12:42:38 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/design_1_wrapper.hdf.
+12:42:40 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+12:42:42 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1444837243000,  Project:1444834914000
+12:42:42 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_1' is different from /home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/design_1_wrapper.hdf.
+12:42:42 INFO  : Copied contents of /home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_1/system.hdf.
+12:42:46 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:42:47 INFO  : Clearing existing target manager status.
+12:42:48 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+12:42:48 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+12:45:55 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:46:28 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+12:46:29 INFO  : XSDB server has started successfully.
+12:46:30 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/design_1_wrapper.hdf.
+12:46:31 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+12:47:22 INFO  : BSP Project P/standalone_bsp_0 has been successfully migrated.
+12:51:15 INFO  : Saving repository preferences.
+12:51:15 INFO  : Reading in cores from local repositories: 
+		 /home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0
+12:51:15 INFO  : Cleaning BSP projects in the workspace.
+12:52:24 INFO  : No changes in MSS file content so not generating sources.
+12:53:33 INFO  : No changes in MSS file content so not generating sources.
+12:56:53 INFO  : No changes in MSS file content so not generating sources.
+13:07:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:07:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655715A" && level==0} -index 1' command is executed.
+13:07:03 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/design_1_wrapper_hw_platform_1/design_1_wrapper.bit"
+13:07:40 INFO  : ps7_init is completed.
+13:07:40 INFO  : ps7_post_config is completed.
+13:07:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:09:47 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:50:28 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+12:50:29 INFO  : XSDB server has started successfully.
+12:50:31 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf.
+12:50:31 INFO  : Restoring local repository preferences: 
+		 /home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0
+12:54:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:54:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655715A" && level==0} -index 1' command is executed.
+12:54:01 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_1/design_1_wrapper.bit"
+12:54:19 INFO  : ps7_init is completed.
+12:54:19 INFO  : ps7_post_config is completed.
+12:54:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:55:10 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:55:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:56:39 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:56:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:57:07 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:57:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:58:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:58:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655715A" && level==0} -index 1' command is executed.
+12:58:10 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_1/design_1_wrapper.bit"
+12:58:16 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:58:29 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:995)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:506)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:588)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+12:58:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:58:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655715A" && level==0} -index 1' command is executed.
+12:58:46 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+12:58:58 INFO  : ps7_init is completed.
+12:58:58 INFO  : ps7_post_config is completed.
+12:58:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:59:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:59:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655715A" && level==0} -index 1' command is executed.
+12:59:37 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+12:59:59 INFO  : ps7_init is completed.
+12:59:59 INFO  : ps7_post_config is completed.
+12:59:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:03:11 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:54:29 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+10:54:33 INFO  : XSDB server has started successfully.
+10:54:35 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf.
+10:54:36 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_2.
+10:54:46 INFO  : Restoring local repository preferences: 
+		 /home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0
+11:01:15 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:01:16 INFO  : XSDB server has started successfully.
+11:01:17 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf.
+11:01:18 INFO  : Restoring local repository preferences: 
+		 /home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0
+11:01:18 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_2.
+11:06:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:06:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+11:06:41 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+11:07:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:07:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+11:07:05 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+11:07:43 INFO  : ps7_init is completed.
+11:07:43 INFO  : ps7_post_config is completed.
+11:07:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:08:33 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:08:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:09:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:09:53 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:09:55 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:10:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:10:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+11:10:56 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+11:11:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:12:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:12:43 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Unknown Error Occured
+    Target '64' Does NOT exist in the Current System
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:670)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:609)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+11:13:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:13:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+11:13:09 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+11:13:36 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:13:47 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:13:48 INFO  : XSDB server has started successfully.
+11:13:49 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf.
+11:13:50 INFO  : Restoring local repository preferences: 
+		 /home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0
+11:13:50 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_2.
+11:14:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:14:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+11:14:10 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+11:14:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:15:19 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:15:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:15:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:17:33 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:17:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:22:12 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:22:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:26:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:26:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+11:26:46 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+11:27:02 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:27:24 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+
+    Could not stop the processor after reset
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:995)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:506)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:588)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:296)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+11:27:33 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:27:47 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:27:48 INFO  : XSDB server has started successfully.
+11:27:48 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf.
+11:27:49 INFO  : Restoring local repository preferences: 
+		 /home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0
+11:27:49 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_2.
+11:28:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:28:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+11:28:22 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+11:28:35 INFO  : ps7_init is completed.
+11:28:35 INFO  : ps7_post_config is completed.
+11:28:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:29:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:29:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+11:29:46 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+11:29:57 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:29:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:30:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:30:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+11:30:21 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+11:31:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:31:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+11:31:12 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+11:31:22 INFO  : ps7_init is completed.
+11:31:22 INFO  : ps7_post_config is completed.
+11:31:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:32:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:32:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+11:32:31 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+11:32:41 INFO  : ps7_init is completed.
+11:32:41 INFO  : ps7_post_config is completed.
+11:32:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:35:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:35:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279655795A" && level==0} -index 1' command is executed.
+11:35:08 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_2/design_1_wrapper.bit"
+11:35:21 INFO  : ps7_init is completed.
+11:35:21 INFO  : ps7_post_config is completed.
+11:35:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:35:59 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:36:24 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:36:27 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:37:08 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:37:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:37:34 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:37:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:38:01 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:38:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:38:41 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:38:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:50:03 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:11:29 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+12:11:30 INFO  : XSDB server has started successfully.
+12:11:31 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf.
+12:11:32 INFO  : Restoring local repository preferences: 
+		 /home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0
+12:11:33 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_2.

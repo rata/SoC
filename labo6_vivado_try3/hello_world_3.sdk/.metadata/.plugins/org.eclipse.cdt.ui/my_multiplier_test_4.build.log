@@ -1,0 +1,36 @@
+12:12:15 **** Build of configuration Debug for project my_multiplier_test_4 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../my_multiplier_test_4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:79:9: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+         xil_printf("multiplier IP test begin.\r\n");
+         ^
+../src/helloworld.c:85:13: warning: implicit declaration of function 'Xil_Out32' [-Wimplicit-function-declaration]
+             MY_MULTIPLIER_mWriteReg(MULTIPLICADOR_BASE, MY_MULTIPLIER_S00_AXI_SLV_REG0_OFFSET, operandos);
+             ^
+../src/helloworld.c:87:13: warning: implicit declaration of function 'Xil_In32' [-Wimplicit-function-declaration]
+             producto= MY_MULTIPLIER_mReadReg(MULTIPLICADOR_BASE, MY_MULTIPLIER_S00_AXI_SLV_REG1_OFFSET);
+             ^
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../my_multiplier_test_4_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: my_multiplier_test_4.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../my_multiplier_test_4_bsp/ps7_cortexa9_0/lib -o "my_multiplier_test_4.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: my_multiplier_test_4.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size my_multiplier_test_4.elf  |tee "my_multiplier_test_4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25212	   1152	  22564	  48928	   bf20	my_multiplier_test_4.elf
+Finished building: my_multiplier_test_4.elf.size
+ 
+
+12:12:15 Build Finished (took 315ms)
+

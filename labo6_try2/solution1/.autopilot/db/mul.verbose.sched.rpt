@@ -1,0 +1,206 @@
+
+
+================================================================
+== Vivado HLS Report for 'mul'
+================================================================
+* Date:           Wed Nov  4 11:29:53 2015
+
+* Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
+* Project:        labo6_try2
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.38|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    2|    2|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|Expression       |        -|      -|      -|      -|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        -|      -|      -|      -|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|      -|
+|Register         |        -|      -|      -|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|      0|      0|      0|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|      0|      0|      0|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+---------+--------------+--------+
+|        RTL Ports       | Dir | Bits| Protocol| Source Object| C Type |
++------------------------+-----+-----+---------+--------------+--------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_AWREADY  | out |    1|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_AWADDR   |  in |    6|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_WVALID   |  in |    1|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_WREADY   | out |    1|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_WDATA    |  in |   32|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_WSTRB    |  in |    4|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_ARVALID  |  in |    1|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_ARREADY  | out |    1|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_ARADDR   |  in |    6|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_RVALID   | out |    1|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_RREADY   |  in |    1|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_RDATA    | out |   32|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_RRESP    | out |    2|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_BVALID   | out |    1|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_BREADY   |  in |    1|  s_axi  |   AXILiteS   | scalar |
+|s_axi_AXILiteS_BRESP    | out |    2|  s_axi  |   AXILiteS   | scalar |
++------------------------+-----+-----+---------+--------------+--------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 2
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+* FSM state operations: 
+
+ <State 1>: 1.00ns
+ST_1: b_read [1/1] 1.00ns
+:4  %b_read = call i8 @_ssdm_op_Read.s_axilite.i8(i8 %b) nounwind
+
+ST_1: a_read [1/1] 1.00ns
+:5  %a_read = call i8 @_ssdm_op_Read.s_axilite.i8(i8 %a) nounwind
+
+
+ <State 2>: 6.38ns
+ST_2: stg_5 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i8 %a) nounwind, !map !0
+
+ST_2: stg_6 [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i8 %b) nounwind, !map !6
+
+ST_2: stg_7 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i16 0) nounwind, !map !10
+
+ST_2: stg_8 [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @mul_str) nounwind
+
+ST_2: stg_9 [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecInterface(i8 %b, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_2: stg_10 [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecInterface(i8 %a, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_2: stg_11 [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_2: tmp_2 [1/1] 0.00ns
+:9  %tmp_2 = sext i8 %a_read to i16
+
+ST_2: tmp_3 [1/1] 0.00ns
+:10  %tmp_3 = sext i8 %b_read to i16
+
+ST_2: prod [1/1] 6.38ns
+:11  %prod = mul i16 %tmp_3, %tmp_2
+
+ST_2: stg_15 [1/1] 0.00ns
+:12  ret i16 %prod
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

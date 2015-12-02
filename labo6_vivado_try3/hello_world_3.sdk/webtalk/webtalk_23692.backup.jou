@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# 
+# Start of session at: Wed Oct 14 11:37:53 2015
+# Process ID: 9400
+# Log file: /home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/webtalk/webtalk.log
+# Journal file: /home/rcampos/co-diseno/hello_world_3-base-for-mult/hello_world_3.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

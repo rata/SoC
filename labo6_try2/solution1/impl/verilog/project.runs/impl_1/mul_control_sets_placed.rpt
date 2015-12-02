@@ -1,0 +1,62 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Wed Nov  4 11:31:54 2015
+| Host         : ws8.labo3 running 64-bit Ubuntu 14.04.1 LTS
+| Command      : report_control_sets -verbose -file mul_control_sets_placed.rpt
+| Design       : mul
+| Device       : xc7z010
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |     9 |
+| Minimum Number of register sites lost to control set restrictions |    21 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              12 |            5 |
+| Yes          | No                    | No                     |              43 |           17 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              27 |            7 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------+----------------------------------------+----------------------------------------+------------------+----------------+
+| Clock Signal |              Enable Signal             |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++--------------+----------------------------------------+----------------------------------------+------------------+----------------+
+|  ap_clk      |                                        |                                        |                1 |              1 |
+|  ap_clk      | mul_AXILiteS_s_axi_U/rdata[15]_i_2_n_0 |                                        |                3 |              5 |
+|  ap_clk      | mul_AXILiteS_s_axi_U/waddr             |                                        |                1 |              6 |
+|  ap_clk      | mul_AXILiteS_s_axi_U/int_a[7]_i_1_n_0  |                                        |                3 |              8 |
+|  ap_clk      | mul_AXILiteS_s_axi_U/int_b[7]_i_1_n_0  |                                        |                2 |              8 |
+|  ap_clk      | mul_AXILiteS_s_axi_U/rdata[15]_i_2_n_0 | mul_AXILiteS_s_axi_U/rdata[15]_i_1_n_0 |                2 |             11 |
+|  ap_clk      |                                        | mul_AXILiteS_s_axi_U/SR[0]             |                5 |             12 |
+|  ap_clk      | ap_sig_bdd_79                          | mul_AXILiteS_s_axi_U/SR[0]             |                5 |             16 |
+|  ap_clk      | mul_AXILiteS_s_axi_U/E[0]              |                                        |                8 |             16 |
++--------------+----------------------------------------+----------------------------------------+------------------+----------------+
+
+
