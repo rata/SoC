@@ -80,6 +80,7 @@ int main(void){
     		}
     	}
         XMul multiplicador;
+
         /* unsigned 32-bit variables  */
         u32 operandoA = 0x00000004;
         u32 operandoB = 0x00000003;

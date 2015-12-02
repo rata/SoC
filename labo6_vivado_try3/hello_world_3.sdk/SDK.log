@@ -439,3 +439,106 @@ java.lang.RuntimeException: Error in Resetting Target
 12:25:23 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf.
 12:25:36 INFO  : Restoring local repository preferences: 
 		 /home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0
+10:50:11 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+10:50:14 INFO  : XSDB server has started successfully.
+10:50:18 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf.
+10:50:20 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_3.
+10:50:20 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1448459370000,  Project:1446652187000
+10:50:20 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_3' is different from /home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf.
+10:50:20 INFO  : Copied contents of /home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_3/system.hdf.
+10:50:26 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:50:29 INFO  : Restoring local repository preferences: 
+		 /home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0
+10:50:34 INFO  : Clearing existing target manager status.
+10:50:40 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+10:50:40 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+11:30:48 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:30:56 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:30:57 INFO  : XSDB server has started successfully.
+11:30:58 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf.
+11:30:59 INFO  : Restoring local repository preferences: 
+		 /home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0
+11:30:59 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_3.
+11:40:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:40:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574554A" && level==0} -index 1' command is executed.
+11:40:24 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_3/design_1_wrapper.bit"
+11:40:39 INFO  : ps7_init is completed.
+11:40:39 INFO  : ps7_post_config is completed.
+11:40:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:42:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:42:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574554A" && level==0} -index 1' command is executed.
+11:42:08 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_3/design_1_wrapper.bit"
+11:42:23 INFO  : ps7_init is completed.
+11:42:23 INFO  : ps7_post_config is completed.
+11:42:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:49:11 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:49:42 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+11:49:43 INFO  : XSDB server has started successfully.
+11:49:44 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf.
+11:49:45 INFO  : Restoring local repository preferences: 
+		 /home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0
+11:49:45 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_3.
+12:04:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:04:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574554A" && level==0} -index 1' command is executed.
+12:04:07 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_3/design_1_wrapper.bit"
+12:04:29 INFO  : ps7_init is completed.
+12:04:29 INFO  : ps7_post_config is completed.
+12:04:29 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:05:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:05:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574554A" && level==0} -index 1' command is executed.
+12:05:29 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_3/design_1_wrapper.bit"
+12:05:39 INFO  : ps7_init is completed.
+12:05:39 INFO  : ps7_post_config is completed.
+12:05:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:06:09 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:06:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:17:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:17:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574554A" && level==0} -index 1' command is executed.
+12:17:38 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_3/design_1_wrapper.bit"
+12:17:48 INFO  : ps7_init is completed.
+12:17:48 INFO  : ps7_post_config is completed.
+12:17:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:19:39 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:19:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:27:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:27:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574554A" && level==0} -index 1' command is executed.
+12:27:46 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_3/design_1_wrapper.bit"
+12:27:53 INFO  : ps7_init is completed.
+12:27:53 INFO  : ps7_post_config is completed.
+12:27:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:29:04 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:29:06 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:30:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:31:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:32:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:55:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:57:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:21:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:22:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:22:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:25:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:28:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:31:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:31:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:31:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574554A" && level==0} -index 1' command is executed.
+13:32:01 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_3/design_1_wrapper.bit"
+13:32:08 INFO  : ps7_init is completed.
+13:32:08 INFO  : ps7_post_config is completed.
+13:32:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:33:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:33:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574554A" && level==0} -index 1' command is executed.
+13:33:08 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_3/design_1_wrapper.bit"
+13:33:16 INFO  : ps7_init is completed.
+13:33:16 INFO  : ps7_post_config is completed.
+13:33:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:35:39 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:38:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:38:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279574554A" && level==0} -index 1' command is executed.
+13:38:11 INFO  : FPGA configured successfully with bitstream "/home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper_hw_platform_3/design_1_wrapper.bit"
+13:38:19 INFO  : ps7_init is completed.
+13:38:19 INFO  : ps7_post_config is completed.
+13:38:19 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:39:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:41:02 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:42:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:46:58 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

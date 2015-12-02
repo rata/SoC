@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# 
+# Start of session at: Fri Nov 20 12:27:46 2015
+# Process ID: 11172
+# Log file: /home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/webtalk/webtalk.log
+# Journal file: /home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
