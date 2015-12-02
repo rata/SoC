@@ -6,7 +6,10 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="@E [SIM-1] CSim failed with errors.&#xA;4&#xA;    while executing&#xA;&quot;source /home/rcampos/co-diseno/tp-final/soc/labo6_try2/solution2/csim.tcl&quot;&#xA;    invoked from within&#xA;&quot;hls::main /home/rcampos/co-diseno/tp-final/soc/labo6_try2/solution2/csim.tcl&quot;&#xA;    (&quot;uplevel&quot; body line 1)&#xA;    invoked from within&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xA;    invoked from within&#xA;&quot;hls_proc $argv&quot;" projectName="labo6_try2" solutionName="solution2" date="2015-11-20T12:41:16.978-0300"/>
+        <logs message="@E [SIM-1] 'csim_design' failed: compilation error(s).&#xA;4&#xA;    while executing&#xA;&quot;source /home/rcampos/co-diseno/tp-final/soc/labo6_try2/solution2/csim.tcl&quot;&#xA;    invoked from within&#xA;&quot;hls::main /home/rcampos/co-diseno/tp-final/soc/labo6_try2/solution2/csim.tcl&quot;&#xA;    (&quot;uplevel&quot; body line 1)&#xA;    invoked from within&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xA;    invoked from within&#xA;&quot;hls_proc $argv&quot;" projectName="labo6_try2" solutionName="solution2" date="2015-11-20T12:39:25.480-0300"/>
+      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>

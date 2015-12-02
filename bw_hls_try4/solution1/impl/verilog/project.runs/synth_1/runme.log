@@ -1,0 +1,429 @@
+
+*** Running vivado
+    with args -log rgb_to_bw.vds -m64 -mode batch -messageDb vivado.pb -notrace -source rgb_to_bw.tcl
+
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source rgb_to_bw.tcl -notrace
+Command: synth_design -top rgb_to_bw -part xc7z010clg400-1 -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 963.461 ; gain = 158.520 ; free physical = 986 ; free virtual = 13314
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'rgb_to_bw' [/home/rcampos/co-diseno/tp-final/soc/bw_hls_try4/solution1/impl/verilog/rgb_to_bw.v:12]
+	Parameter ap_const_logic_1 bound to: 1'b1 
+	Parameter ap_const_logic_0 bound to: 1'b0 
+	Parameter ap_ST_st1_fsm_0 bound to: 3'b001 
+	Parameter ap_ST_st2_fsm_1 bound to: 3'b010 
+	Parameter ap_ST_st3_fsm_2 bound to: 3'b100 
+	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
+	Parameter ap_const_lv1_1 bound to: 1'b1 
+	Parameter C_S_AXI_AXILITES_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ap_const_int64_8 bound to: 8 - type: integer 
+	Parameter C_S_AXI_AXILITES_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
+	Parameter ap_const_lv32_C bound to: 12 - type: integer 
+	Parameter ap_const_lv32_13 bound to: 19 - type: integer 
+	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
+	Parameter ap_const_lv22_556 bound to: 22'b0000000000010101010110 
+	Parameter ap_true bound to: 1'b1 
+	Parameter C_S_AXI_AXILITES_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/rcampos/co-diseno/tp-final/soc/bw_hls_try4/solution1/impl/verilog/rgb_to_bw.v:80]
+INFO: [Synth 8-638] synthesizing module 'rgb_to_bw_AXILiteS_s_axi' [/home/rcampos/co-diseno/tp-final/soc/bw_hls_try4/solution1/impl/verilog/rgb_to_bw_AXILiteS_s_axi.v:9]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_BITS bound to: 6 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 6'b000000 
+	Parameter ADDR_GIE bound to: 6'b000100 
+	Parameter ADDR_IER bound to: 6'b001000 
+	Parameter ADDR_ISR bound to: 6'b001100 
+	Parameter ADDR_AP_RETURN_0 bound to: 6'b010000 
+	Parameter ADDR_RED_DATA_0 bound to: 6'b011000 
+	Parameter ADDR_RED_CTRL bound to: 6'b011100 
+	Parameter ADDR_GREEN_DATA_0 bound to: 6'b100000 
+	Parameter ADDR_GREEN_CTRL bound to: 6'b100100 
+	Parameter ADDR_BLUE_DATA_0 bound to: 6'b101000 
+	Parameter ADDR_BLUE_CTRL bound to: 6'b101100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/rcampos/co-diseno/tp-final/soc/bw_hls_try4/solution1/impl/verilog/rgb_to_bw_AXILiteS_s_axi.v:229]
+INFO: [Synth 8-256] done synthesizing module 'rgb_to_bw_AXILiteS_s_axi' (1#1) [/home/rcampos/co-diseno/tp-final/soc/bw_hls_try4/solution1/impl/verilog/rgb_to_bw_AXILiteS_s_axi.v:9]
+INFO: [Synth 8-638] synthesizing module 'rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1' [/home/rcampos/co-diseno/tp-final/soc/bw_hls_try4/solution1/impl/verilog/rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1.v:17]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 9 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 12 - type: integer 
+	Parameter dout_WIDTH bound to: 22 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1_DSP48_0' [/home/rcampos/co-diseno/tp-final/soc/bw_hls_try4/solution1/impl/verilog/rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1.v:4]
+INFO: [Synth 8-256] done synthesizing module 'rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1_DSP48_0' (2#1) [/home/rcampos/co-diseno/tp-final/soc/bw_hls_try4/solution1/impl/verilog/rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1.v:4]
+INFO: [Synth 8-256] done synthesizing module 'rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1' (3#1) [/home/rcampos/co-diseno/tp-final/soc/bw_hls_try4/solution1/impl/verilog/rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1.v:17]
+INFO: [Synth 8-256] done synthesizing module 'rgb_to_bw' (4#1) [/home/rcampos/co-diseno/tp-final/soc/bw_hls_try4/solution1/impl/verilog/rgb_to_bw.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1001.742 ; gain = 196.801 ; free physical = 944 ; free virtual = 13274
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1001.742 ; gain = 196.801 ; free physical = 944 ; free virtual = 13275
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/rcampos/co-diseno/tp-final/soc/bw_hls_try4/solution1/impl/verilog/rgb_to_bw.xdc]
+Finished Parsing XDC File [/home/rcampos/co-diseno/tp-final/soc/bw_hls_try4/solution1/impl/verilog/rgb_to_bw.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1301.078 ; gain = 1.000 ; free physical = 726 ; free virtual = 13100
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1302.078 ; gain = 497.137 ; free physical = 724 ; free virtual = 13099
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1302.078 ; gain = 497.137 ; free physical = 731 ; free virtual = 13098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1302.078 ; gain = 497.137 ; free physical = 731 ; free virtual = 13098
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul_reg_97_reg' and it is trimmed from '22' to '20' bits. [/home/rcampos/co-diseno/tp-final/soc/bw_hls_try4/solution1/impl/verilog/rgb_to_bw.v:182]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1302.078 ; gain = 497.137 ; free physical = 722 ; free virtual = 13089
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 5     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   9 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   4 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module rgb_to_bw 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module rgb_to_bw_AXILiteS_s_axi 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   9 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1302.078 ; gain = 497.137 ; free physical = 722 ; free virtual = 13089
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP mul_reg_97_reg, operation Mode is: ((D'+A2)*(B:0x556))'.
+DSP Report: register green_read_reg_87_reg is absorbed into DSP mul_reg_97_reg.
+DSP Report: register tmp1_reg_92_reg is absorbed into DSP mul_reg_97_reg.
+DSP Report: register mul_reg_97_reg is absorbed into DSP mul_reg_97_reg.
+DSP Report: operator rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1_U1/rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1_DSP48_0_U/p is absorbed into DSP mul_reg_97_reg.
+DSP Report: operator rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1_U1/rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1_DSP48_0_U/s is absorbed into DSP mul_reg_97_reg.
+WARNING: [Synth 8-3917] design rgb_to_bw has port s_axi_AXILiteS_RRESP[1] driven by constant 0
+WARNING: [Synth 8-3917] design rgb_to_bw has port s_axi_AXILiteS_RRESP[0] driven by constant 0
+WARNING: [Synth 8-3917] design rgb_to_bw has port s_axi_AXILiteS_BRESP[1] driven by constant 0
+WARNING: [Synth 8-3917] design rgb_to_bw has port s_axi_AXILiteS_BRESP[0] driven by constant 0
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[31]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[30]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[29]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[28]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[27]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[26]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[25]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[24]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[23]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[22]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[21]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[20]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[19]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[18]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[17]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[16]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[15]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[14]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[13]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[12]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[11]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[10]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[9]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WDATA[8]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WSTRB[3]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WSTRB[2]
+WARNING: [Synth 8-3331] design rgb_to_bw has unconnected port s_axi_AXILiteS_WSTRB[1]
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1302.078 ; gain = 497.137 ; free physical = 722 ; free virtual = 13089
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1302.078 ; gain = 497.137 ; free physical = 722 ; free virtual = 13089
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP:
++------------+----------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping          | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|rgb_to_bw   | ((D'+A2)*(B:0x556))' | No           | 8      | 11     | 48     | 9      | 20     | 1    | 0    | 1    | 1    | 0     | 1    | 0    | 
++------------+----------------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[31] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[30] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[29] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[28] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[27] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[26] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[25] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[24] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[23] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[22] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[21] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[20] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[19] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[18] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[17] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[16] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[15] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[14] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[13] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[12] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[11] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[10] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[9] ) is unused and will be removed from module rgb_to_bw.
+WARNING: [Synth 8-3332] Sequential element (\rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[8] ) is unused and will be removed from module rgb_to_bw.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1303.078 ; gain = 498.137 ; free physical = 704 ; free virtual = 13073
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1303.078 ; gain = 498.137 ; free physical = 704 ; free virtual = 13073
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1303.078 ; gain = 498.137 ; free physical = 704 ; free virtual = 13073
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1303.078 ; gain = 498.137 ; free physical = 627 ; free virtual = 13004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1304.078 ; gain = 499.137 ; free physical = 627 ; free virtual = 13004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1323.109 ; gain = 518.168 ; free physical = 610 ; free virtual = 12987
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1323.109 ; gain = 518.168 ; free physical = 610 ; free virtual = 12987
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1323.109 ; gain = 518.168 ; free physical = 610 ; free virtual = 12987
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1323.109 ; gain = 518.168 ; free physical = 610 ; free virtual = 12987
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1323.109 ; gain = 518.168 ; free physical = 610 ; free virtual = 12987
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1323.109 ; gain = 518.168 ; free physical = 610 ; free virtual = 12987
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |     3|
+|2     |DSP48E1 |     1|
+|3     |LUT1    |     2|
+|4     |LUT2    |    16|
+|5     |LUT3    |    30|
+|6     |LUT4    |     7|
+|7     |LUT5    |    16|
+|8     |LUT6    |    18|
+|9     |MUXF7   |     2|
+|10    |FDRE    |    51|
+|11    |FDSE    |     1|
++------+--------+------+
+
+Report Instance Areas: 
++------+-----------------------------+-------------------------+------+
+|      |Instance                     |Module                   |Cells |
++------+-----------------------------+-------------------------+------+
+|1     |top                          |                         |   147|
+|2     |  rgb_to_bw_AXILiteS_s_axi_U |rgb_to_bw_AXILiteS_s_axi |   143|
++------+-----------------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1323.109 ; gain = 518.168 ; free physical = 609 ; free virtual = 12986
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 56 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1323.109 ; gain = 101.312 ; free physical = 609 ; free virtual = 12986
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1323.109 ; gain = 518.168 ; free physical = 609 ; free virtual = 12986
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 56 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1324.109 ; gain = 409.652 ; free physical = 607 ; free virtual = 12985
+report_utilization: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1356.125 ; gain = 0.000 ; free physical = 605 ; free virtual = 12983
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 20 13:13:11 2015...

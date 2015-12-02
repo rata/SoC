@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1448036010">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="rgb_to_bw.vdi"/>
+  <File Type="BG-DRC" Name="rgb_to_bw.drc"/>
+  <File Type="BG-BGN" Name="rgb_to_bw.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="rgb_to_bw.sysdef"/>
+  <File Type="BITSTR-MMI" Name="rgb_to_bw.mmi"/>
+  <File Type="BITSTR-BMM" Name="rgb_to_bw_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="rgb_to_bw.nky"/>
+  <File Type="BITSTR-RBT" Name="rgb_to_bw.rbt"/>
+  <File Type="BITSTR-MSK" Name="rgb_to_bw.msk"/>
+  <File Type="BG-BIN" Name="rgb_to_bw.bin"/>
+  <File Type="BG-BIT" Name="rgb_to_bw.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="rgb_to_bw_timing_summary_postroute_physopted.rpx"/>
+  <File Type="PLACE-CLK" Name="rgb_to_bw_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="rgb_to_bw_utilization_placed.pb"/>
+  <File Type="PLACE-DCP" Name="rgb_to_bw_placed.dcp"/>
+  <File Type="PWROPT-DRC" Name="rgb_to_bw_drc_pwropted.rpt"/>
+  <File Type="PLACE-CTRL" Name="rgb_to_bw_control_sets_placed.rpt"/>
+  <File Type="PWROPT-DCP" Name="rgb_to_bw_pwropt.dcp"/>
+  <File Type="OPT-HWDEF" Name="rgb_to_bw.hwdef"/>
+  <File Type="PA-DCP" Name="rgb_to_bw.dcp"/>
+  <File Type="OPT-DRC" Name="rgb_to_bw_drc_opted.rpt"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/impl_1/sources.xml"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="PLACE-IO" Name="rgb_to_bw_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="rgb_to_bw_utilization_placed.rpt"/>
+  <File Type="OPT-DCP" Name="rgb_to_bw_opt.dcp"/>
+  <File Type="PLACE-SIMILARITY" Name="rgb_to_bw_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="rgb_to_bw_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="rgb_to_bw_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="rgb_to_bw_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="rgb_to_bw_drc_physopted.rpt"/>
+  <File Type="ROUTE-DCP" Name="rgb_to_bw_routed.dcp"/>
+  <File Type="ROUTE-DRC" Name="rgb_to_bw_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="rgb_to_bw_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="rgb_to_bw_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="rgb_to_bw_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="rgb_to_bw_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="rgb_to_bw_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="rgb_to_bw_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="rgb_to_bw_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="rgb_to_bw_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="rgb_to_bw_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="rgb_to_bw_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="rgb_to_bw_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="rgb_to_bw_timing_summary_postroute_physopted.rpt"/>
+  <File Type="PA-TCL" Name="rgb_to_bw.tcl"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="rgb_to_bw_timing_summary_postroute_physopted.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/rgb_to_bw_AXILiteS_s_axi.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/rgb_to_bw.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="rgb_to_bw"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/rgb_to_bw.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
+      <Desc>Vivado Implementation Defaults</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

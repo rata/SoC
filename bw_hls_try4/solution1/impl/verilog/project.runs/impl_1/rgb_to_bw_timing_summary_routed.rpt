@@ -1,0 +1,1167 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Fri Nov 20 13:14:05 2015
+| Host         : ws8.labo3 running 64-bit Ubuntu 14.04.1 LTS
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file rgb_to_bw_timing_summary_routed.rpt -rpx rgb_to_bw_timing_summary_routed.rpx
+| Design       : rgb_to_bw
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 27 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 14 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      4.210        0.000                      0                  105        0.173        0.000                      0                  105        3.500        0.000                       0                    53  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock   Waveform(ns)         Period(ns)      Frequency(MHz)
+-----   ------------         ----------      --------------
+ap_clk  {0.000 4.000}        8.000           125.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+ap_clk              4.210        0.000                      0                  105        0.173        0.000                      0                  105        3.500        0.000                       0                    53  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  ap_clk
+  To Clock:  ap_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.210ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.173ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.210ns  (required time - arrival time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            mul_reg_97_reg/D[8]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.129ns  (logic 1.622ns (51.841%)  route 1.507ns (48.159%))
+  Logic Levels:           4  (CARRY4=3 LUT2=1)
+  Clock Path Skew:        0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.600ns = ( 9.600 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.684ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.684     1.684    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X7Y44          FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y44          FDRE (Prop_fdre_C_Q)         0.419     2.103 r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/Q
+                         net (fo=4, routed)           0.837     2.940    rgb_to_bw_AXILiteS_s_axi_U/tmp_2_cast_fu_54_p1[1]
+    SLICE_X8Y44          LUT2 (Prop_lut2_I0_O)        0.299     3.239 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11/O
+                         net (fo=1, routed)           0.000     3.239    rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11_n_0
+    SLICE_X8Y44          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.772 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_4/CO[3]
+                         net (fo=1, routed)           0.000     3.772    rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_4_n_0
+    SLICE_X8Y45          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.889 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_3/CO[3]
+                         net (fo=1, routed)           0.000     3.889    rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_3_n_0
+    SLICE_X8Y46          CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.254     4.143 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_2/CO[0]
+                         net (fo=1, routed)           0.670     4.813    tmp1_fu_58_p2[8]
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/D[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.600     9.600    ap_clk
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CLK
+                         clock pessimism              0.115     9.715    
+                         clock uncertainty           -0.035     9.679    
+    DSP48_X0Y18          DSP48E1 (Setup_dsp48e1_CLK_D[8])
+                                                     -0.656     9.023    mul_reg_97_reg
+  -------------------------------------------------------------------
+                         required time                          9.023    
+                         arrival time                          -4.813    
+  -------------------------------------------------------------------
+                         slack                                  4.210    
+
+Slack (MET) :             4.318ns  (required time - arrival time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            mul_reg_97_reg/D[5]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.082ns  (logic 1.574ns (51.064%)  route 1.508ns (48.936%))
+  Logic Levels:           3  (CARRY4=2 LUT2=1)
+  Clock Path Skew:        0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.600ns = ( 9.600 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.684ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.684     1.684    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X7Y44          FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y44          FDRE (Prop_fdre_C_Q)         0.419     2.103 r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/Q
+                         net (fo=4, routed)           0.837     2.940    rgb_to_bw_AXILiteS_s_axi_U/tmp_2_cast_fu_54_p1[1]
+    SLICE_X8Y44          LUT2 (Prop_lut2_I0_O)        0.299     3.239 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11/O
+                         net (fo=1, routed)           0.000     3.239    rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11_n_0
+    SLICE_X8Y44          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.772 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_4/CO[3]
+                         net (fo=1, routed)           0.000     3.772    rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_4_n_0
+    SLICE_X8Y45          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323     4.095 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_3/O[1]
+                         net (fo=1, routed)           0.672     4.766    tmp1_fu_58_p2[5]
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/D[5]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.600     9.600    ap_clk
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CLK
+                         clock pessimism              0.115     9.715    
+                         clock uncertainty           -0.035     9.679    
+    DSP48_X0Y18          DSP48E1 (Setup_dsp48e1_CLK_D[5])
+                                                     -0.595     9.084    mul_reg_97_reg
+  -------------------------------------------------------------------
+                         required time                          9.084    
+                         arrival time                          -4.766    
+  -------------------------------------------------------------------
+                         slack                                  4.318    
+
+Slack (MET) :             4.396ns  (required time - arrival time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            mul_reg_97_reg/D[6]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.009ns  (logic 1.490ns (49.516%)  route 1.519ns (50.484%))
+  Logic Levels:           3  (CARRY4=2 LUT2=1)
+  Clock Path Skew:        0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.600ns = ( 9.600 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.684ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.684     1.684    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X7Y44          FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y44          FDRE (Prop_fdre_C_Q)         0.419     2.103 r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/Q
+                         net (fo=4, routed)           0.837     2.940    rgb_to_bw_AXILiteS_s_axi_U/tmp_2_cast_fu_54_p1[1]
+    SLICE_X8Y44          LUT2 (Prop_lut2_I0_O)        0.299     3.239 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11/O
+                         net (fo=1, routed)           0.000     3.239    rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11_n_0
+    SLICE_X8Y44          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.772 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_4/CO[3]
+                         net (fo=1, routed)           0.000     3.772    rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_4_n_0
+    SLICE_X8Y45          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     4.011 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_3/O[2]
+                         net (fo=1, routed)           0.682     4.693    tmp1_fu_58_p2[6]
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/D[6]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.600     9.600    ap_clk
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CLK
+                         clock pessimism              0.115     9.715    
+                         clock uncertainty           -0.035     9.679    
+    DSP48_X0Y18          DSP48E1 (Setup_dsp48e1_CLK_D[6])
+                                                     -0.590     9.089    mul_reg_97_reg
+  -------------------------------------------------------------------
+                         required time                          9.089    
+                         arrival time                          -4.693    
+  -------------------------------------------------------------------
+                         slack                                  4.396    
+
+Slack (MET) :             4.434ns  (required time - arrival time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            mul_reg_97_reg/D[4]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.977ns  (logic 1.470ns (49.381%)  route 1.507ns (50.619%))
+  Logic Levels:           3  (CARRY4=2 LUT2=1)
+  Clock Path Skew:        0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.600ns = ( 9.600 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.684ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.684     1.684    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X7Y44          FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y44          FDRE (Prop_fdre_C_Q)         0.419     2.103 r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/Q
+                         net (fo=4, routed)           0.837     2.940    rgb_to_bw_AXILiteS_s_axi_U/tmp_2_cast_fu_54_p1[1]
+    SLICE_X8Y44          LUT2 (Prop_lut2_I0_O)        0.299     3.239 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11/O
+                         net (fo=1, routed)           0.000     3.239    rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11_n_0
+    SLICE_X8Y44          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.772 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_4/CO[3]
+                         net (fo=1, routed)           0.000     3.772    rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_4_n_0
+    SLICE_X8Y45          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     3.991 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_3/O[0]
+                         net (fo=1, routed)           0.670     4.661    tmp1_fu_58_p2[4]
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/D[4]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.600     9.600    ap_clk
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CLK
+                         clock pessimism              0.115     9.715    
+                         clock uncertainty           -0.035     9.679    
+    DSP48_X0Y18          DSP48E1 (Setup_dsp48e1_CLK_D[4])
+                                                     -0.584     9.095    mul_reg_97_reg
+  -------------------------------------------------------------------
+                         required time                          9.095    
+                         arrival time                          -4.661    
+  -------------------------------------------------------------------
+                         slack                                  4.434    
+
+Slack (MET) :             4.455ns  (required time - arrival time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            mul_reg_97_reg/D[7]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.944ns  (logic 1.566ns (53.185%)  route 1.378ns (46.815%))
+  Logic Levels:           3  (CARRY4=2 LUT2=1)
+  Clock Path Skew:        0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.600ns = ( 9.600 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.684ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.684     1.684    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X7Y44          FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y44          FDRE (Prop_fdre_C_Q)         0.419     2.103 r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/Q
+                         net (fo=4, routed)           0.837     2.940    rgb_to_bw_AXILiteS_s_axi_U/tmp_2_cast_fu_54_p1[1]
+    SLICE_X8Y44          LUT2 (Prop_lut2_I0_O)        0.299     3.239 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11/O
+                         net (fo=1, routed)           0.000     3.239    rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11_n_0
+    SLICE_X8Y44          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.772 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_4/CO[3]
+                         net (fo=1, routed)           0.000     3.772    rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_4_n_0
+    SLICE_X8Y45          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     4.087 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_3/O[3]
+                         net (fo=1, routed)           0.542     4.628    tmp1_fu_58_p2[7]
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/D[7]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.600     9.600    ap_clk
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CLK
+                         clock pessimism              0.115     9.715    
+                         clock uncertainty           -0.035     9.679    
+    DSP48_X0Y18          DSP48E1 (Setup_dsp48e1_CLK_D[7])
+                                                     -0.596     9.083    mul_reg_97_reg
+  -------------------------------------------------------------------
+                         required time                          9.083    
+                         arrival time                          -4.628    
+  -------------------------------------------------------------------
+                         slack                                  4.455    
+
+Slack (MET) :             4.590ns  (required time - arrival time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            mul_reg_97_reg/D[2]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.815ns  (logic 1.296ns (46.037%)  route 1.519ns (53.963%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.600ns = ( 9.600 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.684ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.684     1.684    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X7Y44          FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y44          FDRE (Prop_fdre_C_Q)         0.419     2.103 r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/Q
+                         net (fo=4, routed)           0.837     2.940    rgb_to_bw_AXILiteS_s_axi_U/tmp_2_cast_fu_54_p1[1]
+    SLICE_X8Y44          LUT2 (Prop_lut2_I0_O)        0.299     3.239 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11/O
+                         net (fo=1, routed)           0.000     3.239    rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11_n_0
+    SLICE_X8Y44          CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.578     3.817 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_4/O[2]
+                         net (fo=1, routed)           0.682     4.499    tmp1_fu_58_p2[2]
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/D[2]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.600     9.600    ap_clk
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CLK
+                         clock pessimism              0.115     9.715    
+                         clock uncertainty           -0.035     9.679    
+    DSP48_X0Y18          DSP48E1 (Setup_dsp48e1_CLK_D[2])
+                                                     -0.590     9.089    mul_reg_97_reg
+  -------------------------------------------------------------------
+                         required time                          9.089    
+                         arrival time                          -4.499    
+  -------------------------------------------------------------------
+                         slack                                  4.590    
+
+Slack (MET) :             4.660ns  (required time - arrival time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            mul_reg_97_reg/D[3]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.739ns  (logic 1.361ns (49.682%)  route 1.378ns (50.318%))
+  Logic Levels:           2  (CARRY4=1 LUT2=1)
+  Clock Path Skew:        0.031ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.600ns = ( 9.600 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.684ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.684     1.684    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X7Y44          FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y44          FDRE (Prop_fdre_C_Q)         0.419     2.103 r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/Q
+                         net (fo=4, routed)           0.837     2.940    rgb_to_bw_AXILiteS_s_axi_U/tmp_2_cast_fu_54_p1[1]
+    SLICE_X8Y44          LUT2 (Prop_lut2_I0_O)        0.299     3.239 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11/O
+                         net (fo=1, routed)           0.000     3.239    rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_11_n_0
+    SLICE_X8Y44          CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.643     3.882 r  rgb_to_bw_AXILiteS_s_axi_U/mul_reg_97_reg_i_4/O[3]
+                         net (fo=1, routed)           0.542     4.423    tmp1_fu_58_p2[3]
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/D[3]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.600     9.600    ap_clk
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CLK
+                         clock pessimism              0.115     9.715    
+                         clock uncertainty           -0.035     9.679    
+    DSP48_X0Y18          DSP48E1 (Setup_dsp48e1_CLK_D[3])
+                                                     -0.596     9.083    mul_reg_97_reg
+  -------------------------------------------------------------------
+                         required time                          9.083    
+                         arrival time                          -4.423    
+  -------------------------------------------------------------------
+                         slack                                  4.660    
+
+Slack (MET) :             4.672ns  (required time - arrival time)
+  Source:                 mul_reg_97_reg/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        3.221ns  (logic 1.064ns (33.037%)  route 2.157ns (66.963%))
+  Logic Levels:           3  (LUT5=2 MUXF7=1)
+  Clock Path Skew:        -0.149ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.510ns = ( 9.510 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.774ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.774     1.774    ap_clk
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y18          DSP48E1 (Prop_dsp48e1_CLK_P[12])
+                                                      0.434     2.208 r  mul_reg_97_reg/P[12]
+                         net (fo=1, routed)           1.301     3.509    rgb_to_bw_AXILiteS_s_axi_U/P[0]
+    SLICE_X10Y45         LUT5 (Prop_lut5_I0_O)        0.124     3.633 r  rgb_to_bw_AXILiteS_s_axi_U/rdata[0]_i_4/O
+                         net (fo=1, routed)           0.000     3.633    rgb_to_bw_AXILiteS_s_axi_U/rdata[0]_i_4_n_0
+    SLICE_X10Y45         MUXF7 (Prop_muxf7_I0_O)      0.209     3.842 r  rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[0]_i_2/O
+                         net (fo=1, routed)           0.855     4.697    rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[0]_i_2_n_0
+    SLICE_X10Y43         LUT5 (Prop_lut5_I0_O)        0.297     4.994 r  rgb_to_bw_AXILiteS_s_axi_U/rdata[0]_i_1/O
+                         net (fo=1, routed)           0.000     4.994    rgb_to_bw_AXILiteS_s_axi_U/rdata[0]_i_1_n_0
+    SLICE_X10Y43         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.510     9.510    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X10Y43         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[0]/C
+                         clock pessimism              0.115     9.625    
+                         clock uncertainty           -0.035     9.590    
+    SLICE_X10Y43         FDRE (Setup_fdre_C_D)        0.077     9.667    rgb_to_bw_AXILiteS_s_axi_U/rdata_reg[0]
+  -------------------------------------------------------------------
+                         required time                          9.667    
+                         arrival time                          -4.994    
+  -------------------------------------------------------------------
+                         slack                                  4.672    
+
+Slack (MET) :             4.753ns  (required time - arrival time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/waddr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[0]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.946ns  (logic 0.704ns (23.894%)  route 2.242ns (76.106%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.060ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.509ns = ( 9.509 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.684ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.684     1.684    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X13Y45         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/waddr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y45         FDRE (Prop_fdre_C_Q)         0.456     2.140 f  rgb_to_bw_AXILiteS_s_axi_U/waddr_reg[0]/Q
+                         net (fo=3, routed)           1.121     3.261    rgb_to_bw_AXILiteS_s_axi_U/waddr_reg_n_0_[0]
+    SLICE_X11Y47         LUT6 (Prop_lut6_I1_O)        0.124     3.385 r  rgb_to_bw_AXILiteS_s_axi_U/int_red[7]_i_3/O
+                         net (fo=3, routed)           0.322     3.707    rgb_to_bw_AXILiteS_s_axi_U/int_red[7]_i_3_n_0
+    SLICE_X11Y45         LUT4 (Prop_lut4_I0_O)        0.124     3.831 r  rgb_to_bw_AXILiteS_s_axi_U/int_red[7]_i_1/O
+                         net (fo=8, routed)           0.799     4.630    rgb_to_bw_AXILiteS_s_axi_U/int_red[7]_i_1_n_0
+    SLICE_X7Y44          FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.509     9.509    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X7Y44          FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[0]/C
+                         clock pessimism              0.115     9.624    
+                         clock uncertainty           -0.035     9.589    
+    SLICE_X7Y44          FDRE (Setup_fdre_C_CE)      -0.205     9.384    rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[0]
+  -------------------------------------------------------------------
+                         required time                          9.384    
+                         arrival time                          -4.630    
+  -------------------------------------------------------------------
+                         slack                                  4.753    
+
+Slack (MET) :             4.753ns  (required time - arrival time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/waddr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.946ns  (logic 0.704ns (23.894%)  route 2.242ns (76.106%))
+  Logic Levels:           2  (LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.060ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.509ns = ( 9.509 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.684ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.684     1.684    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X13Y45         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/waddr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y45         FDRE (Prop_fdre_C_Q)         0.456     2.140 f  rgb_to_bw_AXILiteS_s_axi_U/waddr_reg[0]/Q
+                         net (fo=3, routed)           1.121     3.261    rgb_to_bw_AXILiteS_s_axi_U/waddr_reg_n_0_[0]
+    SLICE_X11Y47         LUT6 (Prop_lut6_I1_O)        0.124     3.385 r  rgb_to_bw_AXILiteS_s_axi_U/int_red[7]_i_3/O
+                         net (fo=3, routed)           0.322     3.707    rgb_to_bw_AXILiteS_s_axi_U/int_red[7]_i_3_n_0
+    SLICE_X11Y45         LUT4 (Prop_lut4_I0_O)        0.124     3.831 r  rgb_to_bw_AXILiteS_s_axi_U/int_red[7]_i_1/O
+                         net (fo=8, routed)           0.799     4.630    rgb_to_bw_AXILiteS_s_axi_U/int_red[7]_i_1_n_0
+    SLICE_X7Y44          FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk (IN)
+                         net (fo=52, unset)           1.509     9.509    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X7Y44          FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]/C
+                         clock pessimism              0.115     9.624    
+                         clock uncertainty           -0.035     9.589    
+    SLICE_X7Y44          FDRE (Setup_fdre_C_CE)      -0.205     9.384    rgb_to_bw_AXILiteS_s_axi_U/int_red_reg[1]
+  -------------------------------------------------------------------
+                         required time                          9.384    
+                         arrival time                          -4.630    
+  -------------------------------------------------------------------
+                         slack                                  4.753    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.173ns  (arrival time - required time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_green_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            mul_reg_97_reg/A[0]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.363ns  (logic 0.141ns (38.819%)  route 0.222ns (61.181%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.125ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.926ns
+    Source Clock Delay      (SCD):    0.567ns
+    Clock Pessimism Removal (CPR):    0.234ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.567     0.567    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X11Y45         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_green_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y45         FDRE (Prop_fdre_C_Q)         0.141     0.708 r  rgb_to_bw_AXILiteS_s_axi_U/int_green_reg[0]/Q
+                         net (fo=3, routed)           0.222     0.930    green[0]
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/A[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.926     0.926    ap_clk
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CLK
+                         clock pessimism             -0.234     0.692    
+    DSP48_X0Y18          DSP48E1 (Hold_dsp48e1_CLK_A[0])
+                                                      0.066     0.758    mul_reg_97_reg
+  -------------------------------------------------------------------
+                         required time                         -0.758    
+                         arrival time                           0.930    
+  -------------------------------------------------------------------
+                         slack                                  0.173    
+
+Slack (MET) :             0.178ns  (arrival time - required time)
+  Source:                 ap_CS_fsm_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ap_CS_fsm_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.254ns  (logic 0.164ns (64.490%)  route 0.090ns (35.510%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.836ns
+    Source Clock Delay      (SCD):    0.567ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.567     0.567    ap_clk
+    SLICE_X10Y46         FDRE                                         r  ap_CS_fsm_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y46         FDRE (Prop_fdre_C_Q)         0.164     0.731 r  ap_CS_fsm_reg[1]/Q
+                         net (fo=4, routed)           0.090     0.821    ap_sig_bdd_82
+    SLICE_X10Y46         FDRE                                         r  ap_CS_fsm_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.836     0.836    ap_clk
+    SLICE_X10Y46         FDRE                                         r  ap_CS_fsm_reg[2]/C
+                         clock pessimism             -0.253     0.583    
+    SLICE_X10Y46         FDRE (Hold_fdre_C_D)         0.060     0.643    ap_CS_fsm_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -0.643    
+                         arrival time                           0.821    
+  -------------------------------------------------------------------
+                         slack                                  0.178    
+
+Slack (MET) :             0.187ns  (arrival time - required time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_green_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            mul_reg_97_reg/A[2]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.378ns  (logic 0.141ns (37.309%)  route 0.237ns (62.691%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.125ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.926ns
+    Source Clock Delay      (SCD):    0.567ns
+    Clock Pessimism Removal (CPR):    0.234ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.567     0.567    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X11Y45         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_green_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y45         FDRE (Prop_fdre_C_Q)         0.141     0.708 r  rgb_to_bw_AXILiteS_s_axi_U/int_green_reg[2]/Q
+                         net (fo=3, routed)           0.237     0.945    green[2]
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/A[2]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.926     0.926    ap_clk
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CLK
+                         clock pessimism             -0.234     0.692    
+    DSP48_X0Y18          DSP48E1 (Hold_dsp48e1_CLK_A[2])
+                                                      0.066     0.758    mul_reg_97_reg
+  -------------------------------------------------------------------
+                         required time                         -0.758    
+                         arrival time                           0.945    
+  -------------------------------------------------------------------
+                         slack                                  0.187    
+
+Slack (MET) :             0.198ns  (arrival time - required time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_green_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            mul_reg_97_reg/A[4]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.387ns  (logic 0.164ns (42.340%)  route 0.223ns (57.660%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.124ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.926ns
+    Source Clock Delay      (SCD):    0.568ns
+    Clock Pessimism Removal (CPR):    0.234ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.568     0.568    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X10Y47         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_green_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y47         FDRE (Prop_fdre_C_Q)         0.164     0.732 r  rgb_to_bw_AXILiteS_s_axi_U/int_green_reg[4]/Q
+                         net (fo=3, routed)           0.223     0.955    green[4]
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/A[4]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.926     0.926    ap_clk
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CLK
+                         clock pessimism             -0.234     0.692    
+    DSP48_X0Y18          DSP48E1 (Hold_dsp48e1_CLK_A[4])
+                                                      0.066     0.758    mul_reg_97_reg
+  -------------------------------------------------------------------
+                         required time                         -0.758    
+                         arrival time                           0.955    
+  -------------------------------------------------------------------
+                         slack                                  0.198    
+
+Slack (MET) :             0.200ns  (arrival time - required time)
+  Source:                 ap_CS_fsm_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            mul_reg_97_reg/CEM
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.425ns  (logic 0.164ns (38.617%)  route 0.261ns (61.383%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.125ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.926ns
+    Source Clock Delay      (SCD):    0.567ns
+    Clock Pessimism Removal (CPR):    0.234ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.567     0.567    ap_clk
+    SLICE_X10Y46         FDRE                                         r  ap_CS_fsm_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y46         FDRE (Prop_fdre_C_Q)         0.164     0.731 r  ap_CS_fsm_reg[1]/Q
+                         net (fo=4, routed)           0.261     0.992    ap_sig_bdd_82
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CEM
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.926     0.926    ap_clk
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CLK
+                         clock pessimism             -0.234     0.692    
+    DSP48_X0Y18          DSP48E1 (Hold_dsp48e1_CLK_CEM)
+                                                      0.100     0.792    mul_reg_97_reg
+  -------------------------------------------------------------------
+                         required time                         -0.792    
+                         arrival time                           0.992    
+  -------------------------------------------------------------------
+                         slack                                  0.200    
+
+Slack (MET) :             0.210ns  (arrival time - required time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_ier_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            rgb_to_bw_AXILiteS_s_axi_U/int_ier_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.318ns  (logic 0.186ns (58.536%)  route 0.132ns (41.464%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.836ns
+    Source Clock Delay      (SCD):    0.567ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.567     0.567    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X11Y44         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_ier_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y44         FDRE (Prop_fdre_C_Q)         0.141     0.708 r  rgb_to_bw_AXILiteS_s_axi_U/int_ier_reg[1]/Q
+                         net (fo=3, routed)           0.132     0.840    rgb_to_bw_AXILiteS_s_axi_U/p_0_in6_in
+    SLICE_X11Y44         LUT6 (Prop_lut6_I5_O)        0.045     0.885 r  rgb_to_bw_AXILiteS_s_axi_U/int_ier[1]_i_1/O
+                         net (fo=1, routed)           0.000     0.885    rgb_to_bw_AXILiteS_s_axi_U/int_ier[1]_i_1_n_0
+    SLICE_X11Y44         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_ier_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.836     0.836    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X11Y44         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_ier_reg[1]/C
+                         clock pessimism             -0.253     0.583    
+    SLICE_X11Y44         FDRE (Hold_fdre_C_D)         0.092     0.675    rgb_to_bw_AXILiteS_s_axi_U/int_ier_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -0.675    
+                         arrival time                           0.885    
+  -------------------------------------------------------------------
+                         slack                                  0.210    
+
+Slack (MET) :             0.216ns  (arrival time - required time)
+  Source:                 ap_CS_fsm_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ap_CS_fsm_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.352ns  (logic 0.246ns (69.887%)  route 0.106ns (30.113%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.836ns
+    Source Clock Delay      (SCD):    0.567ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.567     0.567    ap_clk
+    SLICE_X10Y46         FDRE                                         r  ap_CS_fsm_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y46         FDRE (Prop_fdre_C_Q)         0.148     0.715 f  ap_CS_fsm_reg[2]/Q
+                         net (fo=8, routed)           0.106     0.821    rgb_to_bw_AXILiteS_s_axi_U/Q[2]
+    SLICE_X10Y46         LUT3 (Prop_lut3_I0_O)        0.098     0.919 r  rgb_to_bw_AXILiteS_s_axi_U/ap_CS_fsm[1]_i_1/O
+                         net (fo=1, routed)           0.000     0.919    ap_NS_fsm[1]
+    SLICE_X10Y46         FDRE                                         r  ap_CS_fsm_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.836     0.836    ap_clk
+    SLICE_X10Y46         FDRE                                         r  ap_CS_fsm_reg[1]/C
+                         clock pessimism             -0.253     0.583    
+    SLICE_X10Y46         FDRE (Hold_fdre_C_D)         0.120     0.703    ap_CS_fsm_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -0.703    
+                         arrival time                           0.919    
+  -------------------------------------------------------------------
+                         slack                                  0.216    
+
+Slack (MET) :             0.223ns  (arrival time - required time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_green_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            mul_reg_97_reg/A[1]
+                            (rising edge-triggered cell DSP48E1 clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.360ns  (logic 0.128ns (35.567%)  route 0.232ns (64.433%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.125ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.926ns
+    Source Clock Delay      (SCD):    0.567ns
+    Clock Pessimism Removal (CPR):    0.234ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.567     0.567    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X11Y45         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_green_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y45         FDRE (Prop_fdre_C_Q)         0.128     0.695 r  rgb_to_bw_AXILiteS_s_axi_U/int_green_reg[1]/Q
+                         net (fo=3, routed)           0.232     0.927    green[1]
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/A[1]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.926     0.926    ap_clk
+    DSP48_X0Y18          DSP48E1                                      r  mul_reg_97_reg/CLK
+                         clock pessimism             -0.234     0.692    
+    DSP48_X0Y18          DSP48E1 (Hold_dsp48e1_CLK_A[1])
+                                                      0.012     0.704    mul_reg_97_reg
+  -------------------------------------------------------------------
+                         required time                         -0.704    
+                         arrival time                           0.927    
+  -------------------------------------------------------------------
+                         slack                                  0.223    
+
+Slack (MET) :             0.233ns  (arrival time - required time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_ap_done_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            rgb_to_bw_AXILiteS_s_axi_U/int_ap_done_reg/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.370ns  (logic 0.209ns (56.508%)  route 0.161ns (43.492%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.836ns
+    Source Clock Delay      (SCD):    0.567ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.567     0.567    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X10Y44         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_ap_done_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y44         FDRE (Prop_fdre_C_Q)         0.164     0.731 r  rgb_to_bw_AXILiteS_s_axi_U/int_ap_done_reg/Q
+                         net (fo=2, routed)           0.161     0.892    rgb_to_bw_AXILiteS_s_axi_U/int_ap_done
+    SLICE_X10Y44         LUT5 (Prop_lut5_I4_O)        0.045     0.937 r  rgb_to_bw_AXILiteS_s_axi_U/int_ap_done_i_1/O
+                         net (fo=1, routed)           0.000     0.937    rgb_to_bw_AXILiteS_s_axi_U/int_ap_done_i_1_n_0
+    SLICE_X10Y44         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_ap_done_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.836     0.836    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X10Y44         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_ap_done_reg/C
+                         clock pessimism             -0.253     0.583    
+    SLICE_X10Y44         FDRE (Hold_fdre_C_D)         0.121     0.704    rgb_to_bw_AXILiteS_s_axi_U/int_ap_done_reg
+  -------------------------------------------------------------------
+                         required time                         -0.704    
+                         arrival time                           0.937    
+  -------------------------------------------------------------------
+                         slack                                  0.233    
+
+Slack (MET) :             0.247ns  (arrival time - required time)
+  Source:                 rgb_to_bw_AXILiteS_s_axi_U/int_gie_reg/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            rgb_to_bw_AXILiteS_s_axi_U/int_gie_reg/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.354ns  (logic 0.186ns (52.507%)  route 0.168ns (47.493%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.836ns
+    Source Clock Delay      (SCD):    0.567ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.567     0.567    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X11Y44         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_gie_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y44         FDRE (Prop_fdre_C_Q)         0.141     0.708 r  rgb_to_bw_AXILiteS_s_axi_U/int_gie_reg/Q
+                         net (fo=3, routed)           0.168     0.876    rgb_to_bw_AXILiteS_s_axi_U/int_gie_reg_n_0
+    SLICE_X11Y44         LUT6 (Prop_lut6_I5_O)        0.045     0.921 r  rgb_to_bw_AXILiteS_s_axi_U/int_gie_i_1/O
+                         net (fo=1, routed)           0.000     0.921    rgb_to_bw_AXILiteS_s_axi_U/int_gie_i_1_n_0
+    SLICE_X11Y44         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_gie_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=52, unset)           0.836     0.836    rgb_to_bw_AXILiteS_s_axi_U/ap_clk
+    SLICE_X11Y44         FDRE                                         r  rgb_to_bw_AXILiteS_s_axi_U/int_gie_reg/C
+                         clock pessimism             -0.253     0.583    
+    SLICE_X11Y44         FDRE (Hold_fdre_C_D)         0.091     0.674    rgb_to_bw_AXILiteS_s_axi_U/int_gie_reg
+  -------------------------------------------------------------------
+                         required time                         -0.674    
+                         arrival time                           0.921    
+  -------------------------------------------------------------------
+                         slack                                  0.247    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         ap_clk
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
+Sources:            { ap_clk }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     DSP48E1/CLK  n/a            3.443         8.000       4.557      DSP48_X0Y18   mul_reg_97_reg/CLK
+Min Period        n/a     FDSE/C       n/a            1.000         8.000       7.000      SLICE_X10Y46  ap_CS_fsm_reg[0]/C
+Min Period        n/a     FDRE/C       n/a            1.000         8.000       7.000      SLICE_X10Y46  ap_CS_fsm_reg[1]/C
+Min Period        n/a     FDRE/C       n/a            1.000         8.000       7.000      SLICE_X10Y46  ap_CS_fsm_reg[2]/C
+Min Period        n/a     FDRE/C       n/a            1.000         8.000       7.000      SLICE_X10Y44  rgb_to_bw_AXILiteS_s_axi_U/int_ap_done_reg/C
+Min Period        n/a     FDRE/C       n/a            1.000         8.000       7.000      SLICE_X10Y46  rgb_to_bw_AXILiteS_s_axi_U/int_ap_start_reg/C
+Min Period        n/a     FDRE/C       n/a            1.000         8.000       7.000      SLICE_X10Y46  rgb_to_bw_AXILiteS_s_axi_U/int_auto_restart_reg/C
+Min Period        n/a     FDRE/C       n/a            1.000         8.000       7.000      SLICE_X9Y44   rgb_to_bw_AXILiteS_s_axi_U/int_blue_reg[0]/C
+Min Period        n/a     FDRE/C       n/a            1.000         8.000       7.000      SLICE_X9Y44   rgb_to_bw_AXILiteS_s_axi_U/int_blue_reg[1]/C
+Min Period        n/a     FDRE/C       n/a            1.000         8.000       7.000      SLICE_X9Y44   rgb_to_bw_AXILiteS_s_axi_U/int_blue_reg[2]/C
+Low Pulse Width   Fast    FDSE/C       n/a            0.500         4.000       3.500      SLICE_X10Y46  ap_CS_fsm_reg[0]/C
+Low Pulse Width   Fast    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X10Y46  ap_CS_fsm_reg[1]/C
+Low Pulse Width   Fast    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X10Y46  ap_CS_fsm_reg[2]/C
+Low Pulse Width   Fast    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X10Y44  rgb_to_bw_AXILiteS_s_axi_U/int_ap_done_reg/C
+Low Pulse Width   Fast    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X10Y46  rgb_to_bw_AXILiteS_s_axi_U/int_ap_start_reg/C
+Low Pulse Width   Fast    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X10Y46  rgb_to_bw_AXILiteS_s_axi_U/int_auto_restart_reg/C
+Low Pulse Width   Fast    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X9Y44   rgb_to_bw_AXILiteS_s_axi_U/int_blue_reg[0]/C
+Low Pulse Width   Fast    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X9Y44   rgb_to_bw_AXILiteS_s_axi_U/int_blue_reg[1]/C
+Low Pulse Width   Fast    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X9Y44   rgb_to_bw_AXILiteS_s_axi_U/int_blue_reg[2]/C
+Low Pulse Width   Fast    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X9Y44   rgb_to_bw_AXILiteS_s_axi_U/int_blue_reg[3]/C
+High Pulse Width  Slow    FDSE/C       n/a            0.500         4.000       3.500      SLICE_X10Y46  ap_CS_fsm_reg[0]/C
+High Pulse Width  Fast    FDSE/C       n/a            0.500         4.000       3.500      SLICE_X10Y46  ap_CS_fsm_reg[0]/C
+High Pulse Width  Slow    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X10Y46  ap_CS_fsm_reg[1]/C
+High Pulse Width  Fast    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X10Y46  ap_CS_fsm_reg[1]/C
+High Pulse Width  Slow    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X10Y46  ap_CS_fsm_reg[2]/C
+High Pulse Width  Fast    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X10Y46  ap_CS_fsm_reg[2]/C
+High Pulse Width  Slow    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X10Y44  rgb_to_bw_AXILiteS_s_axi_U/int_ap_done_reg/C
+High Pulse Width  Fast    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X10Y44  rgb_to_bw_AXILiteS_s_axi_U/int_ap_done_reg/C
+High Pulse Width  Slow    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X10Y46  rgb_to_bw_AXILiteS_s_axi_U/int_ap_start_reg/C
+High Pulse Width  Fast    FDRE/C       n/a            0.500         4.000       3.500      SLICE_X10Y46  rgb_to_bw_AXILiteS_s_axi_U/int_ap_start_reg/C
+
+
+

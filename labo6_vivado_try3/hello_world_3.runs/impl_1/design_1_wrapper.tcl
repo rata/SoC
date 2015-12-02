@@ -50,7 +50,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   debug::add_scope template.lib 1
   open_checkpoint design_1_wrapper_routed.dcp
-  set_property webtalk.parent_dir /home/rcampos/co-diseno/labo6_vivado_try3/hello_world_3.cache/wt [current_project]
+  set_property webtalk.parent_dir /home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.cache/wt [current_project]
   write_bitstream -force design_1_wrapper.bit 
   catch { write_sysdef -hwdef design_1_wrapper.hwdef -bitfile design_1_wrapper.bit -meminfo design_1_wrapper.mmi -ltxfile debug_nets.ltx -file design_1_wrapper.sysdef }
   close_msg_db -file write_bitstream.pb

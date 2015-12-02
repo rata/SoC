@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="rgb_to_bw.cpp" path="/home/rcampos/co-diseno/tp-final/soc/labo6_files/rgb_to_bw.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="rgb_test.cpp" path="/home/rcampos/co-diseno/tp-final/soc/labo6_files/rgb_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

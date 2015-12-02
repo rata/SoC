@@ -1,0 +1,142 @@
+
+
+================================================================
+== Vivado HLS Report for 'rgb_to_bw'
+================================================================
+* Date:           Fri Nov 20 13:11:49 2015
+
+* Version:        2015.2 (Build 1266856 on Fri Jun 26 16:57:37 PM 2015)
+* Project:        bw_hls_try4
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      6.38|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    2|    2|    3|    3|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|Expression       |        -|      -|      0|      9|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        0|      1|     86|    104|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|      1|
+|Register         |        -|      -|     42|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|      1|    128|    114|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|      1|   ~0  |   ~0  |
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------+---------------------------------------+---------+-------+----+-----+
+    |                 Instance                 |                 Module                | BRAM_18K| DSP48E| FF | LUT |
+    +------------------------------------------+---------------------------------------+---------+-------+----+-----+
+    |rgb_to_bw_AXILiteS_s_axi_U                |rgb_to_bw_AXILiteS_s_axi               |        0|      0|  86|  104|
+    |rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1_U1  |rgb_to_bw_am_addmul_9ns_8ns_12ns_22_1  |        0|      1|   0|    0|
+    +------------------------------------------+---------------------------------------+---------+-------+----+-----+
+    |Total                                     |                                       |        0|      1|  86|  104|
+    +------------------------------------------+---------------------------------------+---------+-------+----+-----+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------+----------+-------+---+----+------------+------------+
+    | Variable Name | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------+----------+-------+---+----+------------+------------+
+    |tmp1_fu_58_p2  |     +    |      0|  0|   9|           9|           9|
+    +---------------+----------+-------+---+----+------------+------------+
+    |Total          |          |      0|  0|   9|           9|           9|
+    +---------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |   1|          4|    1|          4|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |   1|          4|    1|          4|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------+----+----+-----+-----------+
+    |        Name       | FF | LUT| Bits| Const Bits|
+    +-------------------+----+----+-----+-----------+
+    |ap_CS_fsm          |   3|   0|    3|          0|
+    |green_read_reg_87  |   8|   0|    8|          0|
+    |mul_reg_97         |  22|   0|   22|          0|
+    |tmp1_reg_92        |   9|   0|    9|          0|
+    +-------------------+----+----+-----+-----------+
+    |Total              |  42|   0|   42|          0|
+    +-------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------------------+-----+-----+------------+--------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_AWREADY  | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_AWADDR   |  in |    6|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WVALID   |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WREADY   | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WDATA    |  in |   32|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WSTRB    |  in |    4|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_ARVALID  |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_ARREADY  | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_ARADDR   |  in |    6|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RVALID   | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RREADY   |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RDATA    | out |   32|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RRESP    | out |    2|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_BVALID   | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_BREADY   |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_BRESP    | out |    2|    s_axi   |   AXILiteS   |    scalar    |
+|ap_clk                  |  in |    1| ap_ctrl_hs |   rgb_to_bw  | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_hs |   rgb_to_bw  | return value |
+|interrupt               | out |    1| ap_ctrl_hs |   rgb_to_bw  | return value |
++------------------------+-----+-----+------------+--------------+--------------+
+
