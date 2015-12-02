@@ -434,3 +434,8 @@ java.lang.RuntimeException: Error in Resetting Target
 12:11:32 INFO  : Restoring local repository preferences: 
 		 /home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0
 12:11:33 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_2.
+12:25:17 INFO  : Launching XSDB server: xsdb -n -s /opt/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+12:25:21 INFO  : XSDB server has started successfully.
+12:25:23 INFO  : Processing command line option -hwspec /home/rcampos/co-diseno/tp-final/soc/labo6_vivado_try3/hello_world_3.sdk/design_1_wrapper.hdf.
+12:25:36 INFO  : Restoring local repository preferences: 
+		 /home/rcampos/co-diseno/ip_repo_mult2/my_multiplier_1.0
